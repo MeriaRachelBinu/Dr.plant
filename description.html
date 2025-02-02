@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Description</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Description</h1>
+    <h2 id="cause-heading">Causes</h2>
+    <p id="cause-desc">Loading...</p>
+    
+    <h2 id="prevention-heading">Prevention</h2>
+    <p id="prevention-desc">Loading...</p>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const imageName = params.get("image");
+
+        // Sample descriptions (Modify as needed)
+        const descriptions = {
+            "3": {
+                "causes": "Downy mildew is a destructive disease caused by the fungus-like organism *Pseudoperonospora cubensis*, affecting cucumbers, melons, pumpkins, and squashes.",
+                "prevention": "To prevent downy mildew: Use resistant plant varieties, improve air circulation, avoid overhead watering, apply fungicides, and rotate crops."
+            },
+            "4": {
+                "causes": "Black spots on plants are caused by various fungi and bacteria, often due to high humidity and poor airflow.",
+                "prevention": "Prevent black spots by using fungicides, removing infected leaves, and ensuring good air circulation."
+            },
+            "5": {
+                "causes": "Fungal diseases like leaf spots, blights, and wilts affect leaves, fruit, flowers, stems, and roots.",
+                "prevention": "Avoid overhead watering, use well-draining soil, and apply organic fungicides when necessary."
+            },
+            "6": {
+                "causes": "Powdery mildew is a common fungal disease, appearing as white or gray powder on leaves. It thrives in warm, dry climates.",
+                "prevention": "Prevent powdery mildew by improving air circulation, using resistant plant varieties, applying neem oil, and reducing humidity levels."
+            }
+        };
+
+        // Get elements
+        const causeDesc = document.getElementById("cause-desc");
+        const preventionDesc = document.getElementById("prevention-desc");
+
+        if (descriptions[imageName]) {
+            causeDesc.innerText = descriptions[imageName].causes;
+            preventionDesc.innerText = descriptions[imageName].prevention;
+        } else {
+            causeDesc.innerText = "No description available.";
+            preventionDesc.innerText = "";
+        }
+    </script>
+</body>
+</html>

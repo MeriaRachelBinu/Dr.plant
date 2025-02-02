@@ -1,0 +1,53 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <nav style="position: fixed; top: 0; width: 100%; background-color: green; padding: 10px; z-index: 1000;">
+        <ul style="list-style: none; margin: 0; padding: 0; display: flex; justify-content: flex-end;">
+            <li style="margin-right: 15px;"><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+            <li style="margin-right: 15px;"><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+            <li><a href="#" id="Contact" style="color: white; text-decoration: none;">Contact</a></li>
+        </ul>
+        <div class="logo">Dr. Plant</div>
+        <div id="Contactdiscription" >
+            <h2 >Contact Us</h2>
+            <p>Email: support@drplant.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: 123 Green Street, Plant City</p>
+        </div>
+    </nav>
+    
+    <main>
+        <h1>Welcome to Dr Plant</h1>
+        <a href="newfile.html">
+            <button onclick id="start button">start</button>
+       </a>
+        
+    </main>
+    
+    
+    
+    <script src="script.js"></script>
+    <script>  document.getElementById("Contact").addEventListener("click", function(event) {
+        event.preventDefault();
+        var desc = document.getElementById("Contactdiscription");
+        if (desc.style.display === "none" || desc.style.display === "") {
+            desc.style.display = "block";
+        } else {
+            desc.style.display = "none";
+        }
+    });
+        // function toggleDescription() {
+        //     var desc = document.getElementById("description");
+        //     if (desc.style.maxHeight) {
+        //         desc.style.maxHeight = null;
+        //     } else {
+        //         desc.style.maxHeight = desc.scrollHeight + "px";
+        //     }
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('2.jpg'); /* Replace with the correct path */
+    background-size: cover; /* This makes the background image cover the entire screen */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Ensures the background image doesn't repeat */
+    position: relative; /* Make sure content stays above the background */
+}
+
+.main {
+    text-align: center;
+    z-index: 2; /* Ensure main content stays on top */
+    position: relative;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Adds some transparency to the navbar */
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3; /* Ensure navbar is above the background */
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+.menu {
+    margin-top: 100px; /* Increases space between navbar and menu */
+    background-color: rgba(0, 0, 0, 0.5); /* Adds transparency to the menu */
+    padding: 20px 0;
+    z-index: 2; /* Ensure the menu stays above the background */
+    position: relative;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centers the list items horizontally */
+}
+
+.menu li {
+    margin: 0 25px; /* Increases the space between menu items */
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.search {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.srch {
+    padding: 8px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.btn {
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #b9400c;
+}

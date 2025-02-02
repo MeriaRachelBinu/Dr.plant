@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Page</title>
+    <style>
+        body {
+            background-image: url('10.jpg'); 
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: rgb(102, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>SELECT THE SYMPTOMS THAT YOU SEE IN YOUR PLANT</h1>
+    <main>
+        
+        <div class="gallery">
+            <img src="3.jpg" alt="3" onclick="openDescription('3')" style="width: 300px; height: 300px; object-fit: cover; border-radius: 10px;">
+            <img src="4.jpg" alt="4" onclick="openDescription('4')" style="width: 300px; height: 300px; object-fit: cover; border-radius: 10px;">
+            <img src="5.jpeg" alt="5" onclick="openDescription('5')" style="width: 300px; height: 300px; object-fit: cover; border-radius: 10px;">
+            <img src="6.jpg" alt="6" onclick="openDescription('6')" style="width: 300px; height: 300px; object-fit: cover; border-radius: 10px;">
+
+           
+        </div>
+    </main>
+
+    <script>
+        // Function to open description page when an image is clicked
+        function openDescription(imageName) {
+            window.location.href = "description.html?image=" + imageName;
+        }
+    </script>
+</body>
+</html>
